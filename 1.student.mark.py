@@ -27,7 +27,7 @@ while True:
 
     if cmd == "c_list":
         for i in course:
-            print(i['ID'], i['Name'])
+            print(f"{i['ID']}_{i['Name']}")
 
     if cmd == "s_list":
         for i in student:
@@ -36,9 +36,7 @@ while True:
     if cmd == "show_mark":
         CId = input("Course id to show marks: ")
         for i in student:
-            SId = s['ID']
-            if SId in mark["CId"]:
-                print(s['ID'], mark["CId"][SId])
+            print(f"{s['ID']}_{s["Name"]}: {mark["CId"][s['ID']]}")
 
     if cmd == "stop":
         print("Shutting down...")
